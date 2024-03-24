@@ -38,7 +38,6 @@ def kmeans_color_quantization(image, n_colors=5):
     color_counts = np.bincount(labels, minlength=n_colors)
 
     return quantized_img, colors, color_counts
-
 def create_color_palette(dominant_colors, color_counts, palette_size=(300, 50)):
     """
     Create a color palette image.
@@ -59,7 +58,6 @@ def create_color_palette(dominant_colors, color_counts, palette_size=(300, 50)):
     swatch_width = palette_size[0]
     swatch_height = palette_size[1]
 
-    font = ImageFont.load_default()
     font_color = (0, 0, 0)
     background_color = (255, 255, 255)
 
@@ -69,11 +67,10 @@ def create_color_palette(dominant_colors, color_counts, palette_size=(300, 50)):
         draw.rectangle([0, i * swatch_height, swatch_width, (i + 1) * swatch_height], fill=color_hex)
 
         count_text = f"{color_counts[i]} units"
-        text_width, text_height = draw.textsize(count_text, font=font)
-        draw.rectangle([swatch_width, i * swatch_height, swatch_width + text_width + 20, (i + 1) * swatch_height],
+
+        draw.rectangle([swatch_width, i * swatch_height, swatch_width + 100, (i + 1) * swatch_height],
                        fill=background_color)
-        draw.text((swatch_width + 10, i * swatch_height + (swatch_height - text_height) // 2),
-                  count_text, fill=font_color, font=font)
+        draw.text((swatch_width + 10, i * swatch_height + 10), count_text, fill=font_color)
 
     return palette
 
