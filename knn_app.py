@@ -1,3 +1,5 @@
+! pip install sklearn
+
 import streamlit as st
 from PIL import ImageDraw, ImageFont
 import numpy as np
