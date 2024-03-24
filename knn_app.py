@@ -71,6 +71,29 @@ def create_color_palette(dominant_colors, color_counts, palette_size=(300, 50)):
 
         count_text = f"{color_counts[i]} units"
 
+        try:
+            # Calculate text size
+            text_width, text_height = draw.textsize(count_text, font=font)
+        except Exception as e:
+            # Print the exception for debugging purposes
+            print(f"Error occurred while calculating text size: {e}")
+            # Handle the error gracefully or raise it to the caller
+
+        draw.rectangle([swatch_width, i * swatch_height, swatch_width + text_width + 20, (i + 1) * swatch_height],
+                       fill=background_color)
+        draw.text((swatch_width + 10, i * swatch_height + (swatch_height - text_height) // 2),
+                  count_text, fill=font_color, font=font)
+
+    return palette
+
+
+    for i, color in enumerate(sorted_colors):
+        color_hex = '#{:02x}{:02x}{:02x}'.format(color[0], color[1], color[2])
+
+        draw.rectangle([0, i * swatch_height, swatch_width, (i + 1) * swatch_height], fill=color_hex)
+
+        count_text = f"{color_counts[i]} units"
+
         # Initialize text_width and text_height
         text_width = 0
         text_height = 0
