@@ -2,6 +2,10 @@
 
 This is a Streamlit web application for performing color clustering on images. The app allows users to upload an image, specify the number of colors for clustering, and view the clustered image along with the dominant colors.
 
+## 🌐 Access the App
+
+You can access the Image Color Clustering App by clicking [here](https://clusterexploration-zfvtjwy9d3efi4vkxybqxa.streamlit.app/).
+
 ## 🚀 Features
 
 - 📁 Upload images in JPG, JPEG, or PNG format.
@@ -38,3 +42,5 @@ For any questions or feedback, feel free to contact the developer:
 Enjoy clustering your images with ease using the Image Color Clustering App! 🎉
 
 Thank you for visiting! 👋
+
+
