@@ -4,7 +4,7 @@ This is a Streamlit web application for performing color clustering on images. T
 
 ## 🌐 Access the App
 
-You can access the Image Color Clustering App by clicking [here](https://clusterexploration-zfvtjwy9d3efi4vkxybqxa.streamlit.app/).
+You can access the Image Color Clustering App by clicking [here]([https://clusterexploration-zfvtjwy9d3efi4vkxybqxa.streamlit.app/](https://image-color-clustering-app.streamlit.app/)).
 
 ## 🚀 Features
 
